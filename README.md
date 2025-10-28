@@ -1,3 +1,20 @@
+# Digit.ink Notes
+
+### Prep
+
+– Merge latest from upstream
+– Current versions we’re using for issuer-coord is the `v1-0-0-modified` branch. For signing-service it’s `main` but we’ve modified it
+– The Docker `image` name is set from `docker-compose.yml` but (when building locally) don’t expect it to enforce tags/branches/etc.; you’ll need to `git checkout` to the above branches
+– When you make changes, adjust the `docker-compose.yml` `image` name and this README to reflect whatever branch/tag you’re using
+
+### Running
+
+– Stop the previously running Docker instance
+– Run `docker compose up --build`
+– Now test. After you launch issuer-coord, if you issue more than one OBV3 simultaneously, you’ll get a “tenant doesn’t exist” error for some (all but one?) of the OBV3s from signing-service. This should only happen once; issuing again should resolve the problem.
+
+---
+
 # Digital Credentials Consortium Verifiable Credentials Issuer
 
 [![Build status](https://img.shields.io/github/actions/workflow/status/digitalcredentials/issuer-coordinator/main.yml?branch=main)](https://github.com/digitalcredentials/issuer-coordinator/actions?query=workflow%3A%22Node.js+CI%22)
