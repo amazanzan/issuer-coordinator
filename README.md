@@ -5,7 +5,7 @@ This fork was originally created to adjust Express request size limits (`express
 ### Prep
 
 – Merge latest from upstream  
-– Current versions we’re using for issuer-coord is the `v1-0-0-modified` branch. For signing-service it’s `main` but we’ve modified it  
+– Current versions we’re using for issuer-coord is the `v1-0-0-modified` branch. For signing-service it’s `main` but we’ve modified it. Work is based on v1.0.0 of issuer-coord due to issues with JSON context (needs array of strings) with later versions.
 – The Docker `image` name is set from `docker-compose.yml` but (when building locally) don’t expect it to enforce tags/branches/etc.; you’ll need to `git checkout` to the above branches  
 – When you make changes, adjust the `docker-compose.yml` `image` name and this README to reflect whatever branch/tag you’re using  
 
