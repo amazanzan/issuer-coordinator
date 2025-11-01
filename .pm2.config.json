@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "issuer-coordinator",
+      "script": "npm",
+      "args": "start",
+      "time": true
+    }
+  ]
+}
